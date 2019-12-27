@@ -1,0 +1,80 @@
+﻿<Page
+    x:Class="GroupProjectAlexVlad.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GroupProjectAlexVlad"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/MenuBackGround/Menu2.jpg"/>
+        </Grid.Background>
+
+
+        <!-- Lets make some columns-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Background="#FF323232">
+            <!-- Lets make some rows -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <!-- Tile 1 -->
+            <Image x:Name="TileOne" Grid.Row="1" HorizontalAlignment="Center" Height="250" Margin="0,20,0,0" VerticalAlignment="Center" Width="250"  Stretch="Fill" Source="/Assets/GameLogos/Diamond.png"  />
+
+            <Grid Grid.Row="3" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                </Grid.RowDefinitions>
+                
+                <!-- User ID-->
+                <TextBox x:Name="userIDTxt"  Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Height="40" Visibility="Visible" RequestedTheme="Default" Margin="20,0,20,0" FontSize="18" PlaceholderText="UserName"/>
+
+                <!-- User Password-->
+                <PasswordBox x:Name="userPassTxt"  Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Height="40" Visibility="Visible" RequestedTheme="Default" Margin="20,0,20,0" PlaceholderText="Password" FontSize="18"/>
+
+            </Grid>
+            
+            <Button x:Name="LoginButton" Grid.Row="4" VerticalAlignment="Stretch"
+                Margin="20" Background="Blue" Foreground="AliceBlue" 
+                Content="Login" HorizontalAlignment="Stretch" Height="80" Click="Button_Click" FontSize="20"
+                ></Button>
+
+            <Grid Grid.Row="5" >
+                <Grid.RowDefinitions>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <!-- Login Button-->
+                <Button x:Name="LoginCreate" Content="SignUp" Background="White" Foreground="Black" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch"  VerticalAlignment="Center"  Margin="20,0,20,0"  Click="Button_Click" FontSize="15"   />
+
+            </Grid>
+            
+            
+        </Grid>
+
+
+    </Grid>
+    
+</Page>

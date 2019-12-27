@@ -1,0 +1,227 @@
+﻿<Page
+    x:Class="GroupProjectAlexVlad.GameMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GroupProjectAlexVlad"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/MenuBackGround/Menu2.jpg"/>
+        </Grid.Background>
+
+
+
+        <!-- Lets make some columns-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <!-- A start button -->
+        <Image x:Name="BigImage" HorizontalAlignment="Stretch"  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Stretch" Margin="0" />
+
+        <!-- A start button -->
+        <Image x:Name="Space" HorizontalAlignment="Stretch"  Grid.Row="0" Grid.Column="1" VerticalAlignment="Stretch" Margin="0" Tapped="Image_Tapped" Source="/Assets/MenuBackground/Menu2-2.gif" Visibility="Visible" RenderTransformOrigin="0.5,0.5"  >
+            <Image.RenderTransform>
+                <CompositeTransform Rotation="270"/>
+            </Image.RenderTransform>
+        </Image>
+
+        <Image x:Name="SpaceShip" HorizontalAlignment="Center" Height="250" Width="250" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Margin="30" Tapped="Image_Tapped" Source="/Assets/SpaceShips/SpaceShip1.png"  />
+
+       
+
+        <!--User data column-->
+        <Grid Grid.Column="2" Background="#FF323232">
+            <!-- Lets make some rows -->
+            <Grid.RowDefinitions>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition ></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Background="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+
+
+                <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0" BorderBrush="Black" Margin="10" Background="#FF323232">
+                    <TextBlock x:Name="userIDlbl" Grid.Row="0"  Text="USER ID" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"  Margin="0,0,0,0" RequestedTheme="Dark" />
+                </Border>
+
+                <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="2" BorderThickness="0" BorderBrush="Black" Margin="10" Background="#FF323232">
+                    <TextBlock x:Name="gamesCompletedlbl" Text="Current Level" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"  Margin="0,0,0,0" RequestedTheme="Dark" />
+                </Border>
+
+
+
+            </Grid>
+
+            <Grid Grid.Row="1" Background="#FF515151">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0" BorderBrush="Black" Margin="10" Background="#FFFF2F2F">
+                    <TextBlock x:Name="CrewMembers" Text="Credits" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" FontWeight="Bold" Grid.ColumnSpan="1" Grid.Column="1" Margin="0,0,0,0" RequestedTheme="Default" />
+                </Border>
+
+                <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" BorderThickness="0" BorderBrush="Black" Margin="10" Background="GreenYellow">
+                    <TextBlock x:Name="ShipStrength" Text="Strength" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" FontWeight="Bold" Grid.ColumnSpan="1" Grid.Column="1" Margin="0,0,0,0" RequestedTheme="Default" />
+                </Border>
+
+                <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="2" BorderThickness="0" BorderBrush="Black" Margin="10" Background="CornflowerBlue">
+                    <TextBlock x:Name="ShipCapacity" Text="Capacity" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" FontWeight="Bold"   Margin="0,0,0,0" RequestedTheme="Default"  />
+                </Border>
+
+            </Grid>
+
+
+            <Grid Grid.Row="5" Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+
+                </Grid.RowDefinitions>
+
+  
+                <!-- A music start/ stop toggle -->
+                <ToggleSwitch x:Name="playerMusic1" Grid.Column="0" Header="Music" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" RequestedTheme="Dark"   Width="50" Toggled="PlayerMusic1_Toggled" />
+
+                <Border x:Name="LeaveGame" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="2" Grid.Column="2"  BorderThickness="0" BorderBrush="Black" Margin="10" Background="#FFB4B4B4" Tapped="NavigatePlanet_Tapped">
+                    <TextBlock x:Name="LeaveLBL" Grid.Row="0"  Text="Save and Exit" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" FontWeight="Bold"  Margin="0,0,0,0" RequestedTheme="Default"  />
+                </Border>
+            </Grid>
+
+
+
+            <Border Grid.Row="2" Grid.Column="0" Grid.RowSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="1,1,1,1" BorderBrush="Black" Margin="10" Background="White" >
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition ></RowDefinition>
+                        <RowDefinition ></RowDefinition>
+                        <RowDefinition ></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Image x:Name="DataSHip" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0" Tapped="Image_Tapped" Source="/Assets/MenuBackground/Menu2-3.gif" Visibility="Visible" RenderTransformOrigin="0.0,0.0"  />
+
+
+                </Grid>
+            </Border>
+
+
+
+
+
+
+        </Grid>
+
+
+        <Grid Grid.Column="0" Background="Black">
+            <Grid.RowDefinitions>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition Height="4*"></RowDefinition>
+
+
+            </Grid.RowDefinitions>
+
+            <!-- A start button -->
+            <Image x:Name="map1" HorizontalAlignment="Stretch"  Grid.Row="0" Grid.RowSpan="2" VerticalAlignment="Stretch" Margin="0" Tapped="Image_Tapped" Source="/Assets/GameMenuBackGround/Menu1.jpg"  />
+
+
+
+
+            <Grid Grid.Row="2" Grid.RowSpan="4" Background="#FF323232">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                </Grid.RowDefinitions>
+
+
+                <Border x:Name="NavigatePlanet" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="0" Grid.Column="0"  BorderThickness="0" BorderBrush="Black" Margin="10" Background="White" Tapped="NavigatePlanet_Tapped">
+                    <TextBlock x:Name="NavigateSystem" Grid.Row="0"  Text="Navigate" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" FontWeight="Bold"  Margin="0,0,0,0" RequestedTheme="Default"  />
+                </Border>
+
+                <Border x:Name="NavigateBattle" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="3" Grid.Column="0"  BorderThickness="0" BorderBrush="Black" Margin="10" Background="White" Tapped="NavigatePlanet_Tapped">
+                    <TextBlock x:Name="BattleLBL" Grid.Row="0"  Text="Battle" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" FontWeight="Bold"  Margin="0,0,0,0" RequestedTheme="Default"  />
+                </Border>
+
+                <Border x:Name="Sell" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="0" Grid.Column="1"  BorderThickness="0" BorderBrush="Black" Margin="10" Background="CornflowerBlue" Tapped="NavigatePlanet_Tapped">
+                    <TextBlock x:Name="SellerLBL" Grid.Row="0"  Text="Sell Resources" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" FontWeight="Bold"  Margin="0,0,0,0" RequestedTheme="Default"  />
+                </Border>
+
+                <Border x:Name="LaunchDropShip" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="0" Grid.Column="2"  BorderThickness="0" BorderBrush="Black" Margin="10" Background="#FFFF2F2F" Tapped="NavigatePlanet_Tapped">
+                    <TextBlock x:Name="dropShip" Grid.Row="0"  Text="Launch Dropship" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" FontWeight="Bold"  Margin="0,0,0,0" RequestedTheme="Default"  />
+                </Border>
+
+            </Grid>
+
+
+
+
+
+            <!-- Extra-
+                    
+                    <ComboBox x:Name="planetComboBox"  SelectedIndex="0" Grid.Row="1" Grid.Column="0" HorizontalAlignment="stretch" VerticalAlignment="Center"   Visibility="Visible" Margin="30,0,30,0" SelectionChanged="ModelComboTxt_SelectionChanged" >
+                        <ComboBoxItem>Pick System</ComboBoxItem>
+                        <ComboBoxItem>Harvest</ComboBoxItem>
+                        <ComboBoxItem>The Old World</ComboBoxItem>
+                        <ComboBoxItem>The Old Jack</ComboBoxItem>
+                        <ComboBoxItem>The Wandering Aurora</ComboBoxItem>
+                        <ComboBoxItem>Centerpoint station</ComboBoxItem>
+
+                    </ComboBox>
+                    Extra -->
+        </Grid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </Grid>
+</Page>

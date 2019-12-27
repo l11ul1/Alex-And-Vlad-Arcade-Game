@@ -1,0 +1,69 @@
+﻿<Page
+    x:Class="GroupProjectAlexVlad.Battle.BattleGamePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GroupProjectAlexVlad.Battle"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="grid">
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="Assets/Sprites/spacedust1.jpg"/>
+        </Grid.Background>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="desktopView">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                
+            </VisualStateGroup>
+
+        </VisualStateManager.VisualStateGroups>
+        <Image x:Name="BigImage" HorizontalAlignment="Stretch"  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" VerticalAlignment="Stretch" Margin="0" />
+
+        <Grid x:Name="gameTopBar" HorizontalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.05*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal" Grid.Row="0">
+                <TextBlock x:Name="scoreText" FontSize="20" Width="auto" Text="Credits" Canvas.ZIndex="9" Margin="25,0" VerticalAlignment="Center" HorizontalAlignment="Left" Height="auto" Foreground="White"
+                FontFamily="Fonts/space_invaders.ttf#Space Invaders" />
+                <TextBlock x:Name="scoreBlock" FontSize="20" Width="auto" Text="000" Canvas.ZIndex="9" Margin="0" VerticalAlignment="Center" HorizontalAlignment="Left" Height="auto" Foreground="White"
+                FontFamily="Fonts/space_invaders.ttf#Space Invaders" />
+            </StackPanel>
+
+            
+        </Grid>
+
+        <Canvas x:Name="canvas" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="{Binding ElementName=grid, Path=ActualWidth}" Height="{Binding ElementName=grid, Path=ActualHeight}">
+            <Canvas.Background>
+                <ImageBrush Stretch="Fill"/>
+            </Canvas.Background>
+        </Canvas>
+
+        <StackPanel x:Name="gameOverPanel" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="5" Background="Black" BorderBrush="Yellow" Visibility="Collapsed">
+            <TextBlock x:Name="gameOverText" Text="Game Over" Margin="20" Foreground="White" FontSize="70" FontFamily="Fonts/space_invaders.ttf#Space Invaders" />
+            <TextBlock x:Name="finalScoreText" Text="Score" Margin="0" Foreground="White" HorizontalAlignment="Center" FontSize="20" FontFamily="Fonts/space_invaders.ttf#Space Invaders" />
+            <TextBlock x:Name="finalScoreBlock" Text="723413" Margin="0" Foreground="White" HorizontalAlignment="Center" FontSize="40" FontFamily="Fonts/space_invaders.ttf#Space Invaders" />
+
+            <Button x:Name="submitScoreBtn" 
+                VerticalContentAlignment="Bottom"
+                HorizontalContentAlignment="Center"
+                Content=" Submit Score" 
+                Margin="20"
+                BorderBrush="White"
+                Foreground="White"
+                Padding="5,5,5,0"
+                FontSize="25"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center"
+                RequestedTheme="Light"  Click="SubmitScoreBtn_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Page>

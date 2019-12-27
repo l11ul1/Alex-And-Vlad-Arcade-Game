@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{E6EE7980-C313-4BD9-BF02-BA3F3C663DE4}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GroupProjectAlexVlad</RootNamespace>
+    <AssemblyName>GroupProjectAlexVlad</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.17763.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <PackageCertificateKeyFile>GroupProjectAlexVlad_TemporaryKey.pfx</PackageCertificateKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <OutputPath>bin\ARM64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Battle\BattleGamePage.xaml.cs">
+      <DependentUpon>BattleGamePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Battle\BattleLogic\Invaders.cs" />
+    <Compile Include="Battle\BattleLogic\Player.cs" />
+    <Compile Include="Battle\BattleMain.xaml.cs">
+      <DependentUpon>BattleMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GameMenu.xaml.cs">
+      <DependentUpon>GameMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuLogic\JSONDataContractHandler.cs" />
+    <Compile Include="MenuLogic\Pictures.cs" />
+    <Compile Include="MenuLogic\SoundsManager.cs" />
+    <Compile Include="MenuLogic\Items.cs" />
+    <Compile Include="Seller\SellerLogic\PurchaseSell.cs" />
+    <Compile Include="Seller\SellerLogic\Vendor.cs" />
+    <Compile Include="Seller\SellerMain.xaml.cs">
+      <DependentUpon>SellerMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Seller\Upgrade.xaml.cs">
+      <DependentUpon>Upgrade.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShipDeck\GameLogic\MatchingManager.cs" />
+    <Compile Include="ShipDeck\SpaceShipDeckGamePage.xaml.cs">
+      <DependentUpon>SpaceShipDeckGamePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShipDeck\SpaceShipDeckMain.xaml.cs">
+      <DependentUpon>SpaceShipDeckMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuLogic\Account.cs" />
+    <Compile Include="MenuLogic\GameAccountManager.cs" />
+    <Compile Include="MenuLogic\PassAccount.cs" />
+    <Compile Include="MenuLogic\Planets.cs" />
+    <Compile Include="MenuLogic\SpaceShip.cs" />
+    <Compile Include="NavigationMap.xaml.cs">
+      <DependentUpon>NavigationMap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="Battle\Assets\Sprites\icon.psd" />
+    <None Include="GroupProjectAlexVlad_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\GameLogos\Diamond.png" />
+    <Content Include="Assets\MenuBackground\Menu2-3.gif" />
+    <Content Include="Assets\MenuBackground\Menu4.jpg" />
+    <Content Include="Assets\MenuBackground\green.png" />
+    <Content Include="Assets\MenuBackground\Galaxy.jpg" />
+    <Content Include="Assets\Planets\PlanetBattle5.jpg" />
+    <Content Include="Assets\Planets\PlanetBattle4.jpg" />
+    <Content Include="Assets\Planets\PlanetBattle3.jpg" />
+    <Content Include="Assets\Planets\PlanetBattle2.jpg" />
+    <Content Include="Assets\Planets\PlanetBattle1.jpg" />
+    <Content Include="Assets\Planets\Planet5.jpg" />
+    <Content Include="Assets\Planets\Planet4.jpg" />
+    <Content Include="Assets\Planets\Planet3.jpg" />
+    <Content Include="Assets\MenuBackground\Menu2-2.gif" />
+    <Content Include="Assets\MenuBackground\Menu2.jpg" />
+    <Content Include="Assets\MenuBackground\Menu1.jpg" />
+    <Content Include="Assets\MenuMusic\MenuMusic1.mp3" />
+    <Content Include="Assets\Planets\Planet2.jpg" />
+    <Content Include="Assets\Planets\Planet1.jpg" />
+    <Content Include="Assets\SpaceShips\ReconDrone1.png" />
+    <Content Include="Assets\SpaceShips\ReconDrone2.png" />
+    <Content Include="Assets\SpaceShips\ReconDrone3.png" />
+    <Content Include="Assets\SpaceShips\SpaceShip1.png" />
+    <Content Include="Assets\SpaceShips\SpaceShip2.png" />
+    <Content Include="Assets\SpaceShips\SpaceShip3.png" />
+    <Content Include="Assets\SpaceShips\SpaceShip4.png" />
+    <Content Include="Assets\SpaceShips\SpaceShip5.png" />
+    <Content Include="Assets\SpaceShips\SpaceShip6.png" />
+    <Content Include="Assets\SpaceShips\SpaceShip7.png" />
+    <Content Include="Assets\SpaceShips\SpaceShip8.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="Battle\Assets\Audio\gameover.mp3" />
+    <Content Include="Battle\Assets\Audio\explosion.wav" />
+    <Content Include="Battle\Assets\Audio\02-rounds-1-9.mp3" />
+    <Content Include="Battle\Assets\Audio\invaderkilled.wav" />
+    <Content Include="Battle\Assets\Audio\01-opening-theme.mp3" />
+    <Content Include="Battle\Assets\Audio\shoot.wav" />
+    <Content Include="Battle\Assets\Sprites\alien-1-1.png" />
+    <Content Include="Battle\Assets\Sprites\alien-1-2.png" />
+    <Content Include="Battle\Assets\Sprites\alien-2-1.png" />
+    <Content Include="Battle\Assets\Sprites\alien-2-2.png" />
+    <Content Include="Battle\Assets\Sprites\alien-3-1.png" />
+    <Content Include="Battle\Assets\Sprites\alien-3-2.png" />
+    <Content Include="Battle\Assets\Sprites\alien-4.png" />
+    <Content Include="Battle\Assets\Sprites\alien-bullet.png" />
+    <Content Include="Battle\Assets\Sprites\defense-full.png" />
+    <Content Include="Battle\Assets\Sprites\explosion-1.png" />
+    <Content Include="Battle\Assets\Sprites\explosion-2.png" />
+    <Content Include="Battle\Assets\Sprites\explosion.png" />
+    <Content Include="Battle\Assets\Sprites\player-bullet.png" />
+    <Content Include="Battle\Assets\Sprites\player.png" />
+    <Content Include="Battle\Assets\Sprites\spacedust1.jpg" />
+    <Content Include="Assets\Planets\Planet3Land.png" />
+    <Content Include="Assets\MenuBackground\Menu3.jpg" />
+    <Content Include="Assets\Planets\Planet2Land.png" />
+    <Content Include="Assets\Planets\Planet1Land.png" />
+    <Content Include="Assets\MenuMusic\MenuMusic2.mp3" />
+    <Content Include="Assets\MenuMusic\MenuMusic3.mp3" />
+    <Content Include="ShipDeck\Assets\Maps\map1\gameImage4.png" />
+    <Content Include="ShipDeck\Assets\Maps\map1\gameImage3.png" />
+    <Content Include="ShipDeck\Assets\Maps\map1\gameCheck1.png" />
+    <Content Include="ShipDeck\Assets\Maps\map1\gameCheck2.png" />
+    <Content Include="ShipDeck\Assets\Maps\map1\BackGroundGame.jpg" />
+    <Content Include="ShipDeck\Assets\Maps\map1\gameImage1.png" />
+    <Content Include="ShipDeck\Assets\Maps\map1\gameImage2.png" />
+    <Content Include="ShipDeck\Assets\Maps\map2\BackGroundGame.jpg" />
+    <Content Include="ShipDeck\Assets\Maps\map2\gameImage4.png" />
+    <Content Include="ShipDeck\Assets\Maps\map2\gameImage1.png" />
+    <Content Include="ShipDeck\Assets\Maps\map2\gameImage2.png" />
+    <Content Include="ShipDeck\Assets\Maps\map2\gameCheck2.png" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="ShipDeck\Assets\BackgroundMenu.jpg" />
+    <Content Include="ShipDeck\Assets\Maps\map2\gameImage3.png" />
+    <Content Include="ShipDeck\Assets\Maps\map2\gameCheck1.png" />
+    <Content Include="ShipDeck\Assets\Maps\map3\gameCheck2.png" />
+    <Content Include="ShipDeck\Assets\Maps\map3\gameImage4.png" />
+    <Content Include="ShipDeck\Assets\Maps\map3\gameImage3.png" />
+    <Content Include="ShipDeck\Assets\Maps\map3\gameCheck1.png" />
+    <Content Include="ShipDeck\Assets\Maps\map3\gameImage1.png" />
+    <Content Include="ShipDeck\Assets\Maps\map3\gameImage2.png" />
+    <Content Include="ShipDeck\Assets\Maps\map3\BackGroundGame.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Battle\BattleGamePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Battle\BattleMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GameMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Seller\SellerMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Seller\Upgrade.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShipDeck\SpaceShipDeckGamePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShipDeck\SpaceShipDeckMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NavigationMap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.3</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

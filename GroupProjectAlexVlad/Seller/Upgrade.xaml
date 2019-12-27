@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="GroupProjectAlexVlad.Seller.Upgrade"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GroupProjectAlexVlad.Seller"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Loaded="Page_Loaded"
+    >
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="/Assets/MenuBackground/Menu3.jpg"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="1.2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <ListView x:Name="listOfMyItems" Margin="20" Background="White"/>
+        <TextBlock x:Name="coins" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="30"/>
+        <Image x:Name="ship" Grid.Column="1" Grid.Row="0" Source="/Assets/SpaceShips/SpaceShip1.png" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button x:Name="upgrade"  VerticalAlignment="Center" HorizontalAlignment="Center" Width="200" Height="40" Content="UPGRADE" Click="Button_Click" Background="CornflowerBlue" Margin="20"/>
+            <Button x:Name="goback" VerticalAlignment="Center" HorizontalAlignment="Center" Width="200" Height="40" Content="GO BACK" Click="Button_Click" Background="#FFFF2F2F" Margin="20"/>
+        </StackPanel>
+    </Grid>
+</Page>

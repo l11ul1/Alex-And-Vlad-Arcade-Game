@@ -1,0 +1,75 @@
+﻿<Page
+    x:Class="GroupProjectAlexVlad.Battle.BattleMain"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GroupProjectAlexVlad.Battle"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+
+        </Grid.ColumnDefinitions>
+
+        <!-- A start button -->
+        <Image x:Name="Droid" HorizontalAlignment="Stretch"  Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Stretch" Margin="0"   />
+
+        <Grid Grid.Column="0" Background="#FF323232">
+
+            <Grid.RowDefinitions>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition Height="4*"></RowDefinition>
+
+
+            </Grid.RowDefinitions>
+
+           
+
+
+
+            <Grid Grid.Row="2" Grid.RowSpan="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                    <RowDefinition ></RowDefinition>
+                </Grid.RowDefinitions>
+
+
+
+
+                <Border x:Name="GoBack" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="3" Grid.Column="0"  BorderThickness="0" BorderBrush="Black" Margin="10" Background="White" Tapped="NavigatePlanet_Tapped">
+                    <TextBlock x:Name="GoBackRTN" Grid.Row="0"  Text="Return" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" FontWeight="Bold"  Margin="0,0,0,0" RequestedTheme="Default"  />
+                </Border>
+
+                <Border x:Name="playBtn" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="5" Grid.Column="3"  BorderThickness="0" BorderBrush="Black" Margin="10" Background="#FFFF2F2F" Tapped="NavigatePlanet_Tapped">
+                    <TextBlock x:Name="LaunchRTN" Grid.Row="0"  Text="Start Battle" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" FontWeight="Bold"  Margin="0,0,0,0" RequestedTheme="Default"  />
+                </Border>
+
+
+            </Grid>
+
+
+
+
+        </Grid>
+
+
+      
+
+       
+    </Grid>
+</Page>

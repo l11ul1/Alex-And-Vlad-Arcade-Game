@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="GroupProjectAlexVlad.ShipDeck.SpaceShipDeckMain"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GroupProjectAlexVlad.ShipDeck"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <!-- Our Grid -->
+    <Grid x:Name="GridData1" FocusVisualPrimaryBrush="Black" Background="Black">
+
+        <!-- Lets make some columns in grid 1 -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <!-- Lets make some rows in grid 1 -->
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+
+        <!-- A start button -->
+        <Image x:Name="map1" HorizontalAlignment="Stretch"  Grid.Row="0" VerticalAlignment="Stretch"  Tapped="Image_Tapped"  />
+
+        <!-- A start button -->
+        <Image x:Name="map2" HorizontalAlignment="Stretch"  Grid.Row="1" VerticalAlignment="Stretch"  Tapped="Image_Tapped" />
+
+        <!-- A start button -->
+        <Image x:Name="map3" HorizontalAlignment="Stretch"  Grid.Row="2" VerticalAlignment="Stretch"  Tapped="Image_Tapped"  />
+
+        <!-- A start button -->
+        <Image x:Name="map4" HorizontalAlignment="Stretch"  Grid.Row="0" Grid.Column="1" VerticalAlignment="Stretch"  Tapped="Image_Tapped" />
+
+        <!-- A start button -->
+        <Image x:Name="map5" HorizontalAlignment="Stretch"  Grid.Row="1" Grid.Column="1" VerticalAlignment="Stretch"  Tapped="Image_Tapped" />
+
+        <!-- A start button -->
+        <Image x:Name="map6" HorizontalAlignment="Stretch"  Grid.Row="2" Grid.Column="1" VerticalAlignment="Stretch"  Tapped="Image_Tapped" />
+
+
+
+        <!-- A back button -->
+        <Button x:Name="playerBack" Content="Bridge" Grid.Row="3" Grid.Column="0"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"  Margin="0,0,0,0"  Click="GameClick" FontSize="38" FontFamily="Arial Black" RequestedTheme="Dark" />
+
+    </Grid>
+</Page>

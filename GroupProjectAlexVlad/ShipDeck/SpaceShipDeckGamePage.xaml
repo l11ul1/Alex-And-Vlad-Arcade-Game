@@ -1,0 +1,124 @@
+﻿<Page
+    x:Class="GroupProjectAlexVlad.ShipDeck.SpaceShipDeckGamePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GroupProjectAlexVlad.ShipDeck"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+    <!-- Our Grid -->
+    <Grid x:Name="GridData1" Background="Black">
+
+        <!-- Lets make some rows in grid 1 -->
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Our 2nd Grid -->
+        <Grid x:Name="playArea" Grid.Row="0">
+
+
+            <!-- Lets make some columns in nested grid 2-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <!-- Lets make some rows in nested grid 2-->
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <!-- Lets make our tiles -->
+            <!-- Tile 1 -->
+            <Image x:Name="TileOne" HorizontalAlignment="Center" Height="200" Margin="0,0,0,0" VerticalAlignment="Center" Width="200"  Stretch="Fill" Source="/Assets/joystick.png" Tapped="Tile_Tapped" />
+            <!-- Tile 2 -->
+            <Image x:Name="TileTwo" Grid.Column="1" HorizontalAlignment="Center" Height="200" Margin="0,0,0,0" VerticalAlignment="Center" Width="200"  Stretch="Fill" Source="/Assets/joystick.png" Tapped="Tile_Tapped"/>
+            <!-- Tile 3 -->
+            <Image x:Name="TileThree" Grid.Column="2" HorizontalAlignment="Center" Height="200" Margin="0,0,0,0" VerticalAlignment="Center" Width="200"  Stretch="Fill" Source="/Assets/joystick.png" Tapped="Tile_Tapped"/>
+            <!-- Tile 4 -->
+            <Image x:Name="TileFour" Grid.Column="3" HorizontalAlignment="Center" Height="200" Margin="0,0,0,0" VerticalAlignment="Center" Width="200"  Stretch="Fill" Source="/Assets/joystick.png" Tapped="Tile_Tapped"/>
+            <!-- Tile 5 -->
+            <Image x:Name="TileFive" Grid.Row="1" HorizontalAlignment="Center" Height="200" Margin="0,0,0,0" VerticalAlignment="Center" Width="200"  Stretch="Fill" Source="/Assets/joystick.png" Tapped="Tile_Tapped"/>
+            <!-- Tile 6 -->
+            <Image x:Name="TileSix" Grid.Row="1"  Grid.Column="1" HorizontalAlignment="Center" Height="200" Margin="0,0,0,0" VerticalAlignment="Center" Width="200"  Stretch="Fill" Source="/Assets/joystick.png" Tapped="Tile_Tapped"/>
+            <!-- Tile 7 -->
+            <Image x:Name="TileSeven" Grid.Row="1"  Grid.Column="2" HorizontalAlignment="Center" Height="200" Margin="0,0,0,0" VerticalAlignment="Center" Width="200"  Stretch="Fill" Source="/Assets/joystick.png" Tapped="Tile_Tapped"/>
+            <!-- Tile 8 -->
+            <Image x:Name="TileEight" Grid.Row="1"  Grid.Column="3" HorizontalAlignment="Center" Height="200" Margin="0,0,0,0" VerticalAlignment="Center" Width="200"  Stretch="Fill" Source="/Assets/joystick.png" Tapped="Tile_Tapped"/>
+
+        </Grid>
+
+        <!-- Our 3rd Grid -->
+        <Grid Grid.Row="2">
+
+            <!-- Lets make some columns in nested grid 3-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <!-- A go back button -->
+            <Button x:Name="playerBack" Content="Game Menu" Grid.Row="1" Grid.Column="0"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"  Margin="0,100,0,0"  Click="GameClick" FontSize="38" FontFamily="Arial Black" RequestedTheme="Dark" />
+
+            <!-- GameLog label -->
+            <Border Grid.Column="1"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="0" BorderBrush="Black" Margin="0,100,0,0" Background="White" Grid.ColumnSpan="2">
+                <ScrollViewer Grid.Column="0" Grid.Row="0">
+                    <TextBlock x:Name="gameLogTxt" Grid.Row="0"  Text="GameLog" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="auto" FontSize="20"  Grid.Column="1" Margin="10,10,10,10" RequestedTheme="Default" />
+                </ScrollViewer>
+            </Border>
+
+            <!-- Our 4th Grid -->
+            <Grid Grid.Column="3" Margin="0,100,0,0" Background="#FF838383">
+
+                <!-- Lets make some rows in nested grid 4-->
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Textblock with total matches -->
+                <TextBlock x:Name="gameCounterTxt" Grid.Row="0"  Text="Total Matches" HorizontalAlignment="Center" VerticalAlignment="Center" Width="auto" FontSize="30"  Grid.Column="1" Margin="10,10,10,10" RequestedTheme="Default" />
+
+                <!-- Our 5th Grid -->
+                <Grid Grid.Column="0" Grid.Row="1" Margin="0,0,0,0" >
+
+                    <!-- Lets make some columns in nested grid 5-->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Tile 8 -->
+                    <Image x:Name="TileOneCorrect" Grid.Row="0"  Grid.Column="0" HorizontalAlignment="Center" Height="80" Margin="0,0,0,0" VerticalAlignment="Center" Width="80"  Stretch="Fill" />
+
+                    <!-- Tile 8 -->
+                    <Image x:Name="TileTwoCorrect" Grid.Row="0"  Grid.Column="1" HorizontalAlignment="Center" Height="80" Margin="0,0,0,0" VerticalAlignment="Center" Width="80"  Stretch="Fill" />
+
+                    <!-- Tile 8 -->
+                    <Image x:Name="TileThreeCorrect" Grid.Row="0"  Grid.Column="2" HorizontalAlignment="Center" Height="80" Margin="0,0,0,0" VerticalAlignment="Center" Width="80"  Stretch="Fill" />
+
+                    <!-- Tile 8 -->
+                    <Image x:Name="TileFourCorrect" Grid.Row="0"  Grid.Column="3" HorizontalAlignment="Center" Height="80" Margin="0,0,0,0" VerticalAlignment="Center" Width="80"  Stretch="Fill" />
+
+
+                </Grid>
+
+            </Grid>
+
+        </Grid>
+
+    </Grid>
+</Page>
